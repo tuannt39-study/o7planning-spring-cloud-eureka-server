@@ -1,0 +1,20 @@
+spring:
+    profiles: fr
+    application:
+        name: LOCALHOSTFR
+
+server:
+    port: 8762
+
+eureka:
+    instance:
+        hostname: localhost-fr
+        appname: LOCALHOSTFR
+    client:
+        registerWithEureka: true
+#        fetchRegistry: true
+        serviceUrl:
+#            defaultZone: 'http://${eureka.instance.hostname}:${server.port}/eureka/'
+            defaultZone: 'http://localhost-us:8761/eureka/,http://localhost-vn:8763/eureka/,http://localhost-en:8764/eureka/'
+#    server:
+#        enableSelfPreservation: false

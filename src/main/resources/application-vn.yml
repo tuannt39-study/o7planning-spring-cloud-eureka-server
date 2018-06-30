@@ -1,0 +1,20 @@
+spring:
+    profiles: vn
+    application:
+        name: LOCALHOSTVN
+
+server:
+    port: 8763
+
+eureka:
+    instance:
+        hostname: localhost-vn
+        appname: LOCALHOSTVN
+    client:
+        registerWithEureka: true
+#        fetchRegistry: true
+        serviceUrl:
+#            defaultZone: 'http://${eureka.instance.hostname}:${server.port}/eureka/'
+            defaultZone: 'http://localhost-us:8761/eureka/,http://localhost-fr:8762/eureka/,http://localhost-en:8764/eureka/'
+#    server:
+#        enableSelfPreservation: false
